@@ -83,7 +83,7 @@ def compute():
 
     # Dictionary of 5 datasets. e.g., dct["nc"] = [data, labels]
     # 'nc', 'nm', 'bvv', 'add', 'b'. keys: 'nc', 'nm', 'bvv', 'add', 'b' (abbreviated datasets)
-    answers["1A: datasets"] = datasets
+    dct = answers["1A: datasets"] = datasets
 
     #answers["1A: datasets"]["nc"] = datasets["nc"]
     #answers["1A: datasets"]["nm"] = datasets["nm"]
@@ -123,12 +123,12 @@ def compute():
     plt.show()
 
     #answers["1C: cluster successes"] = {
-     #   "bvv": [3], 
-      #  "add": [3],  
-       # "b": [3]     
-        #}
+    #    "bvv": [3], 
+    #    "add": [3],  
+    #    "b": [3]     
+    #    }
     
-    #answers["1C: cluster failures"] = ["nc", "nm"]
+    answers["1C: cluster failures"] = ["nc", "nm"]
 
     # dct value: return a dictionary of one or more abbreviated dataset names (zero or more elements) 
     # and associated k-values with correct clusters.  key abbreviations: 'nc', 'nm', 'bvv', 'add', 'b'. 
@@ -137,7 +137,7 @@ def compute():
         "bvv": [3], 
         "add": [3],  
         "b": [3]     
-        } 
+        }
 
     # dct value: return a list of 0 or more dataset abbreviations (list has zero or more elements, 
     # which are abbreviated dataset names as strings)
