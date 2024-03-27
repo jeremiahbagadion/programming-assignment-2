@@ -83,7 +83,7 @@ def compute():
 
     # Dictionary of 5 datasets. e.g., dct["nc"] = [data, labels]
     # 'nc', 'nm', 'bvv', 'add', 'b'. keys: 'nc', 'nm', 'bvv', 'add', 'b' (abbreviated datasets)
-    dct = answers["1A: datasets"] = datasets
+    answers["1A: datasets"] = datasets
 
     #answers["1A: datasets"]["nc"] = datasets["nc"]
     #answers["1A: datasets"]["nm"] = datasets["nm"]
