@@ -50,7 +50,7 @@ def compute():
     """
 
     # dct: return value from the make_blobs function in sklearn, expressed as a list of three numpy arrays
-    dct = answers["2A: blob"] = [np.zeros(0)]
+    dct = answers["2A: blob"] = [data, labels, np.zeros(20)]
 
     """
     B. Modify the fit_kmeans function to return the SSE (see Equations 8.1 and 8.2 in the book).
