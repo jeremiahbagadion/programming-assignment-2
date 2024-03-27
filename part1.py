@@ -83,13 +83,13 @@ def compute():
 
     # Dictionary of 5 datasets. e.g., dct["nc"] = [data, labels]
     # 'nc', 'nm', 'bvv', 'add', 'b'. keys: 'nc', 'nm', 'bvv', 'add', 'b' (abbreviated datasets)
-    dct = answers["1A: datasets"] = {}
+    dct = answers["1A: datasets"] = datasets
 
-    answers["1A: datasets"]["nc"] = datasets["nc"]
-    answers["1A: datasets"]["nm"] = datasets["nm"]
-    answers["1A: datasets"]["bvv"] = datasets["bvv"]
-    answers["1A: datasets"]["add"] = datasets["add"]
-    answers["1A: datasets"]["b"] = datasets["b"]
+    #answers["1A: datasets"]["nc"] = datasets["nc"]
+    #answers["1A: datasets"]["nm"] = datasets["nm"]
+    #answers["1A: datasets"]["bvv"] = datasets["bvv"]
+    #answers["1A: datasets"]["add"] = datasets["add"]
+    #answers["1A: datasets"]["b"] = datasets["b"]
 
     """
    B. Write a function called fit_kmeans that takes dataset (before any processing on it), i.e., pair of (data, label) Numpy arrays, and the number of clusters as arguments, and returns the predicted labels from k-means clustering. Use the init='random' argument and make sure to standardize the data (see StandardScaler transform), prior to fitting the KMeans estimator. This is the function you will use in the following questions. 
