@@ -52,10 +52,9 @@ def compute():
     A.	Load the provided dataset “hierachal_toy_data.mat” using the scipy.io.loadmat function.
     """
     toy_data = io.loadmat('C:\\Users\\Jeremiah\\Downloads\\hierarchical_toy_data.mat')
-    answers = {"3A: toy data": toy_data}
 
     # return value of scipy.io.loadmat()
-    answers["3A: toy data"] = {}
+    answers["3A: toy data"] = toy_data
 
     """
     B.	Create a linkage matrix Z, and plot a dendrogram using the scipy.hierarchy.linkage and scipy.hierachy.dendrogram functions, with “single” linkage.
