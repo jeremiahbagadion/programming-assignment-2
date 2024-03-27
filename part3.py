@@ -51,7 +51,7 @@ def compute():
     """
     A.	Load the provided dataset “hierachal_toy_data.mat” using the scipy.io.loadmat function.
     """
-    toy_data = io.loadmat('C:\\Users\\Jeremiah\\Downloads\\hierarchical_toy_data.mat')
+    toy_data = io.loadmat('hierarchical_toy_data.mat')
 
     # return value of scipy.io.loadmat()
     answers["3A: toy data"] = toy_data
