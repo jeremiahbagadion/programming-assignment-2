@@ -106,8 +106,27 @@ def compute():
     D.	Repeat part 2.C for inertia (note this is an attribute in the kmeans estimator called _inertia). Do the optimal k’s agree?
     """
 
+    inertia_values = []
+    for k in range(1, 9):
+        scaler = StandardScaler()
+        data_standardized = scaler.fit_transform(data)  # Standardize the data
+    
+        kmeans = KMeans(n_clusters=k, init='random', random_state=42)
+        kmeans.fit(data_standardized)  # Fit the model on standardized data
+        inertia = kmeans.inertia_ 
+        inertia_values.append([k, inertia])
+
+    plt.figure(figsize=(10, 6))
+    plt.plot([k for k, inertia in inertia_values], [inertia for k, inertia in inertia_values], marker='o')
+    plt.xlabel('Number of clusters (k)')
+    plt.ylabel('Inertia')
+    plt.title('Inertia vs. Number of Clusters')
+    plt.grid(True)
+    plt.show()
+
     # dct value has the same structure as in 2C
-    dct = answers["2D: inertia plot"] = [[k, sse] for k, sse in sse_values]
+    dct = answers["2D: inertia plot"] = [[k, inertia] for k, inertia in inertia_values]
+
 
     # dct value should be a string, e.g., "yes" or "no"
     dct = answers["2D: do ks agree?"] = "yes"
