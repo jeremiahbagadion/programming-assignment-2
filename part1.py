@@ -70,11 +70,11 @@ def compute():
     aniso = (X_aniso, blobs[1])
 
     datasets = {
-        "nc": noisy_circles,
-        "nm": noisy_moons,
-        "bvv": varied,
-        "add": aniso,
-        "b": blobs
+        'nc': noisy_circles,
+        'nm': noisy_moons,
+        'bvv': varied,
+        'add': aniso,
+        'b': blobs
         }
     
     # Scaling all datasets for consistency
