@@ -35,7 +35,7 @@ def fit_hierarchical_cluster(dataset, linkage_type, n_clusters):
     scaler = StandardScaler()
     data_standardized = scaler.fit_transform(data)
 
-    model = AgglomerativeClustering(n_clusters=n_clusters, affinity='euclidean', linkage=linkage_type)
+    model = AgglomerativeClustering(n_clusters=n_clusters, linkage=linkage_type)
 
     labels = model.fit_predict(data_standardized)
 
